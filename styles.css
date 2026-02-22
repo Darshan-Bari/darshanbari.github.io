@@ -99,30 +99,36 @@ body {
 }
 
 .about-section{
-    min-height: 90vh;
-    display: flex;
-    /* justify-content: center; */
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    gap: 180px;
-    padding: 40px;
+    /* gap: 180px; */
+    /* padding: 80px; */
     /* margin-top: 100px; */
 
 }
 
-.minecraft-about {
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: space-between;
+    height: 350px;
     margin-top: -280px;
-    margin-left: 80px;
+     margin-left: 80px; 
     
 }
 
 .about-title{
     font-family: 'Press Start 2P', cursive;
-    font-size: 70px;
+    font-size: 45px;
     color: white;
     letter-spacing: 4px;
     text-shadow: 4px 4px 0 black;  
     transition: all 0.25s ease;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .about-title:hover{
@@ -141,7 +147,10 @@ body {
 .about-box {
         display: inline-block;
         justify-content: right;
-        margin:auto;
+        /* margin:auto; */
+        margin-left:-420px;
+        /* max-width: 00px; */
+
 }
 
 
@@ -154,18 +163,46 @@ body {
     padding: 60px 40px;
 }
 
-.about p {
+.about-box p {
 
-      font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.3;
       color: #ffffff;
-      font-size: 30px;
-      font-weight: 300;
+      font-size: 28px;
+      font-weight: 200;
+     max-width: 500px;
+
 }
 
-.brace {
+.brace-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    height: 250px;
+    color: #ffffff;
+    font-size : 30px;
+}
+
+.about-heading-row{
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+
+
+}
+
+.open-brace {
     color: #16f529;
-    font-size: 55px;
-    margin-top: 20px;
+    font-size: 47px;
+    position: relative;
+    top: -10px;
+}
+
+.close-brace {
+    color: #16f529;
+    font-size: 47px;
+    margin-top: 400px;
+    margin-bottom: 20px;
+    margin-left: 80px;
 
 }
