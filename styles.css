@@ -14,6 +14,27 @@ body {
 
     }
 
+ .button-home {
+    position: fixed;
+    top: 20px;
+    right: 250px;
+    background-color: #ffcc33;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 5px 5px 0 black;
+    transition: all 0.2s ease;
+    z-index: 1000;
+
+    }
+    .button-home:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 rgb(116, 116, 116);
+    }
+
     .button-about {
     position: fixed;
     top: 20px;
@@ -55,6 +76,8 @@ body {
         transform: translate(2px, 2px);
         box-shadow: 2px 2px 0 rgb(116, 116, 116);
     }
+
+
 
 .card {
     margin-top:80px;
@@ -121,12 +144,7 @@ body {
 
 .about-section{
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    /* gap: 180px; */
-    /* padding: 80px; */
-    /* margin-top: 100px; */
+    padding: 100px 80px;
 
 }
 
@@ -136,7 +154,7 @@ body {
     gap:20px;
     justify-content: space-between;
     height: 350px;
-    margin-top: -280px;
+    /* margin-top: -280px; */
      margin-left: 80px; 
     
 }
@@ -151,20 +169,23 @@ body {
     margin-left: 50px;
 }
 
-.about-title{
+.about-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 45px;
-    color: #202b3b;
+    font-size: 48px;
     letter-spacing: 4px;
-    text-shadow: 2px 2px 0 black;  
-    transition: all 0.25s ease;
-    cursor: pointer;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    color: transparent;                 
+    -webkit-text-stroke: 2px #202b3b;  
+
 }
 
-.about-title:hover{
+.about-title:hover {
+    -webkit-text-stroke: 2px #494949;
     text-shadow:
-        4px 4px 0 #000,
+        2px 2px 0 #272727,
         0 0 10px #00bfff,
         0 0 20px #1e90ff,
         0 0 40px #66ccff;
@@ -173,7 +194,9 @@ body {
 }
 
 
-
+#about {
+    scroll-margin-top: 100px;
+}
 
 .about {
 
@@ -214,15 +237,15 @@ body {
 
 .open-brace {
     color: #ff9e02;
-    font-size: 55px;
+    font-size: 60px;
     position: relative;
     top: -10px;
 }
 
 .close-brace {
     color: #ff9e02;
-    font-size: 55px;
-    margin-top: 180px;
+    font-size: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 80px;
 
@@ -230,8 +253,8 @@ body {
 
 .close-brace2 {
     color: #ff9e02;
-    font-size: 55px;
-    margin-top: 90px;
+    font-size: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 80px;
 
@@ -240,8 +263,13 @@ body {
 
 /* ===== SKILLS GRID ===== */
 
-#skills {
+/* #skills {
     grid-template-columns: 1fr;  /* remove 2-column layout */
+ */
+
+#skills {
+    padding: 120px 0;
+    scroll-margin-top: 100px;
 }
 
 .skills-grid {
@@ -261,6 +289,8 @@ body {
     text-align: center;
     box-shadow: 4px 4px 0 rgb(171, 171, 171);
     transition: all 0.2s ease;
+    position: relative;       
+    overflow: visible;  
 }
 
 .skill-card:hover {
@@ -268,13 +298,17 @@ body {
     box-shadow: 3px 3px 0 black;
 }
 
-.skill-card img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 15px;
-}
 
 .skill-card p {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
+
+.skill-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
