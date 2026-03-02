@@ -7,6 +7,7 @@
   
 html {
         scroll-behavior: smooth;
+        zoom: 0.85;
     }
 
 body {
@@ -17,7 +18,7 @@ body {
  .button-home {
     position: fixed;
     top: 20px;
-    right: 250px;
+    right: 385px;
     background-color: #ffcc33;
     color: black;
     text-decoration: none;
@@ -25,7 +26,7 @@ body {
     border: 3px solid black;
     border-radius: 12px;
     font-weight: 600;
-    box-shadow: 5px 5px 0 black;
+    box-shadow: 4px 4px 0 black;
     transition: all 0.2s ease;
     z-index: 1000;
 
@@ -38,7 +39,7 @@ body {
     .button-about {
     position: fixed;
     top: 20px;
-    right: 130px;
+    right: 277px;
     background-color: #ffcc33;
     color: black;
     text-decoration: none;
@@ -46,7 +47,7 @@ body {
     border: 3px solid rgb(0, 0, 0);
     border-radius: 12px;
     font-weight: 600;
-    box-shadow: 5px 5px 0 black;
+    box-shadow: 4px 4px 0 black;
     transition: all 0.2s ease;
     z-index: 1000;
 
@@ -59,6 +60,27 @@ body {
  .button-skills {
     position: fixed;
     top: 20px;
+    right: 175px;
+    background-color: #ffcc33;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 4px 4px 0 black;
+    transition: all 0.2s ease;
+    z-index: 1000;
+
+    }
+    .button-skills:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 rgb(116, 116, 116);
+    }
+
+     .button-touch {
+    position: fixed;
+    top: 20px;
     right: 20px;
     background-color: #ffcc33;
     color: black;
@@ -67,12 +89,12 @@ body {
     border: 3px solid black;
     border-radius: 12px;
     font-weight: 600;
-    box-shadow: 5px 5px 0 black;
+    box-shadow: 4px 4px 0 black;
     transition: all 0.2s ease;
     z-index: 1000;
 
     }
-    .button-skills:hover {
+    .button-touch:hover {
         transform: translate(2px, 2px);
         box-shadow: 2px 2px 0 rgb(116, 116, 116);
     }
@@ -143,6 +165,7 @@ body {
 }
 
 .about-section{
+    margin-top: 100px;
     min-height: 100vh;
     padding: 100px 80px;
 
@@ -178,7 +201,7 @@ body {
     transition: all 0.25s ease;
 
     color: transparent;                 
-    -webkit-text-stroke: 2px #202b3b;  
+    -webkit-text-stroke: 2.5px #202b3b;  
 
 }
 
@@ -207,25 +230,7 @@ body {
     padding: 60px 40px;
 }
 
-/* .about-box p {
 
-    line-height: 1.3;
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 200;
-    max-width: 500px;
-
-} */
-
-/* .brace-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: space-between;
-    height: 250px;
-    color: #ffffff;
-    font-size : 30px;
-} */
 
 .about-heading-row{
     display: flex;
@@ -270,27 +275,31 @@ body {
 #skills {
     padding: 120px 0;
     scroll-margin-top: 100px;
+    padding-bottom: 200px;
+
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 260px);
-    gap: 50px;
-    justify-content: center;  
-    margin-top: 60px;
-    margin-left: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    justify-items: center;
 }
 
 .skill-card {
     background: #ffcc33;
     border: 4px solid black;
     border-radius: 18px;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     box-shadow: 4px 4px 0 rgb(171, 171, 171);
     transition: all 0.2s ease;
     position: relative;       
     overflow: visible;  
+    width: 100%;
+    max-width: 270px;
 }
 
 .skill-card:hover {
@@ -312,3 +321,60 @@ body {
     margin: 0 auto 15px auto;
 }
 
+
+/* ===== CONTACT SECTION ===== */
+
+.contact-section {
+    padding: 120px 80px;
+    margin-bottom: 220px;
+    scroll-margin-top: 100px;
+    margin-top: 250px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.contact-left h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 3px solid black;
+    background: #e5e5e5;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    background: #ffcc33;
+    border: 4px solid black;
+    padding: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 black;
+    transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 black;
+}
