@@ -342,6 +342,7 @@ body {
     font-size: 60px;
     font-weight: 900;
     line-height: 1.1;
+    margin-left: 100px;
 }
 
 .contact-form {
@@ -377,4 +378,91 @@ body {
 .contact-form button:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 black;
+}
+
+
+
+/* for mobile interface */
+@media (max-width: 768px) {
+    
+    /* 1. Fix the Navigation Buttons */
+    /* They are currently fixed with 'right' pixels, which overlaps on mobile */
+    .button-home, .button-about, .button-skills, .button-touch {
+        position: static; /* Let them flow naturally in a row/stack */
+        display: inline-block;
+        margin: 5px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    /* Optional: Wrap buttons in a container if you want them centered at the top */
+    body {
+        text-align: center; /* Centers the buttons and text on mobile */
+        zoom: 1.0; /* Reset the zoom for mobile devices */
+    }
+
+    /* 2. Hero Card Adjustment */
+    .card {
+        width: 90%; /* Instead of 1000px */
+        height: auto;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .top h1 {
+        font-size: 40px; /* Smaller for mobile screens */
+    }
+
+    .name-box {
+        width: 100%; /* Instead of 800px */
+        height: auto;
+        padding: 20px;
+    }
+
+    .name-box h2 {
+        font-size: 32px; /* Scale down the big DARSHAN text */
+    }
+
+    /* 3. About Section */
+    .about-section {
+        padding: 40px 20px;
+        margin-top: 50px;
+    }
+
+    .about-left {
+        margin-left: 0;
+        height: auto;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-p {
+        font-size: 18px;
+        margin-left: 0;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    /* 4. Skills Grid */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Force one card per row */
+        gap: 30px;
+    }
+
+    /* 5. Contact Section */
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack "Let's Talk" on top of the Form */
+        gap: 40px;
+    }
+
+    .contact-left h1 {
+        font-size: 36px;
+    }
+    
+    .contact-section {
+        padding: 40px 20px;
+        margin-top: 100px;
+    }
 }
