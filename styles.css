@@ -380,6 +380,13 @@ body {
     box-shadow: 2px 2px 0 black;
 }
 
+.marquee {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #fc1c33;
+    font-weight: 400;
+}
+
 
 
 /* for mobile interface */
